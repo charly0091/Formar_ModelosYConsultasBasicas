@@ -19,7 +19,7 @@ module.exports = {
     },
     recomended: (req, res) => {
         db.Movies.findAll({
-            order: [['release_date', 'DESC']],
+            order: [['rating', 'DESC']],
             limit: 5
         })
         .then(movies => {
